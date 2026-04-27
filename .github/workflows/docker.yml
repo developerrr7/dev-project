@@ -18,5 +18,8 @@ jobs:
       - name: Run container test
         run: docker run -d -p 3000:3000 devops-app
 
+      - name: wait for app
+        run: sleep 5
+
       - name: Check app
         run: curl http://localhost:3000
